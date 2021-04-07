@@ -1,19 +1,14 @@
 from rest_framework import serializers
 from . models import *
 
-class UserSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = Product
         fields = '__all__'
 
-class ProduitSerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Produit
-        fields = '__all__'
-
-class CategorieSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Categorie
+        model = Category
         fields = '__all__'
 
 class TypeSerializer(serializers.ModelSerializer):
@@ -21,22 +16,37 @@ class TypeSerializer(serializers.ModelSerializer):
         model = Type
         fields = '__all__'
 
-class CaisseSerializer(serializers.ModelSerializer):
+class BoxSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Caisse
+        model = Box
         fields = '__all__'
 
-class CommandeSerializer(serializers.ModelSerializer):
+class BoxLogSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Commande
+        model = BoxLog
         fields = '__all__'
 
-class EmplacementSerializer(serializers.ModelSerializer):
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Emplacement
+        model = Order
         fields = '__all__'
 
-class LigneCommandeSerializer(serializers.ModelSerializer):
+class OrderStatusSerializer(serializers.ModelSerializer):
     class Meta:
-        model = LigneCommande
+        model = OrderStatus
+        fields = '__all__'
+
+class LocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Location
+        fields = '__all__'
+
+class OrderLigneSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderLigne
+        fields = '__all__'
+
+class KitchenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Kitchen
         fields = '__all__'

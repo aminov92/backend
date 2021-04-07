@@ -3,7 +3,7 @@ from . models import *
 
 # Register your models here.
 
-admin.register(Produit, Categorie, Type, Caisse, Commande, Emplacement, LigneCommande)(admin.ModelAdmin)
+admin.register(Product, Category, Type, Box, BoxLog, Order, Location, OrderLigne, OrderStatus, Kitchen)(admin.ModelAdmin)
 
 
 
